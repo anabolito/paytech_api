@@ -16,6 +16,13 @@ namespace Paytech.Controllers
             return new LoginService().GetAll();
         }
 
+        [HttpGet(Name = "GetByUsername")]
+
+        public Login GetByUsername(string username)
+        {
+            return new LoginService().GetByUsername(username);
+        }
+
         [HttpPost(Name = "Insert")]
         public ActionResult Insert(Login login)
         {
@@ -23,6 +30,13 @@ namespace Paytech.Controllers
                 return StatusCode(200);
             else
                 return BadRequest();
+        }
+
+        [HttpDelete(Name = "Delete")]
+        public ActionResult Delete(string username)
+        {
+            new LoginService().Delete(username);
+            return NoContent();
         }
     }
 }

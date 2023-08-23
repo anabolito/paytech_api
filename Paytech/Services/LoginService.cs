@@ -16,9 +16,20 @@ namespace Paytech.Services
         {
             return _loginRepository.Insert(login);
         }
+
+        public void Delete(string username)
+        {
+            _loginRepository.Delete(username);
+        }
+
         public List<Login> GetAll()
         {
             return _loginRepository.GetAll();
+        }
+
+        public Login GetByUsername(string username)
+        {
+            return _loginRepository.GetByUsername(username);
         }
 
         public async Task<bool> AuthenticateAsync(string username, string senha)

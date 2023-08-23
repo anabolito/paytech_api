@@ -12,30 +12,31 @@ namespace Paytech.Repositories
         {
             List<Login> list = new();
 
-            using (var db = new SqlConnection(_conn))
-            {
-                var logins = db.Query<Login>(Login.SELECT_ALL);
-                return (List<Login>)logins;
-            }
+            using var db = new SqlConnection(_conn);
+            var logins = db.Query<Login>(Login.SELECT_ALL);
+            return (List<Login>)logins;
         }
 
-        public List<Login> GetByUsername()
+        public Login GetByUsername(string username)
         {
-            using (var db = new SqlConnection(_conn))
-            {
-                var login = db.Query<Login>(Login.SELECT_BY_USERNAME);
-                return (List<Login>)login;
-            }
+            using var db = new SqlConnection(_conn);
+            var login = db.QuerySingleOrDefault<Login>(Login.SELECT_BY_USERNAME);
+            return login;
         }
 
         public bool Insert(Login login)
         {
-            using (var db = new SqlConnection(_conn))
-            {
-                db.Execute(Login.INSERT, login);
-            }
+            using var db = new SqlConnection(_conn);
+            db.Execute(Login.INSERT, login);
             return true;
         }
 
+
+        public void Delete(string username)
+        {
+            Login login = GetByUsername(username);
+            using var db = new SqlConnection(_conn);
+            db.Execute(Login.DELETE, login);
+        }
     }
 }

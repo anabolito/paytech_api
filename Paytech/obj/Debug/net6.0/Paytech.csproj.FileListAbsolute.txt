@@ -1,0 +1,7 @@
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.csproj.AssemblyReference.cache
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.AssemblyInfoInputs.cache
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.AssemblyInfo.cs
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.csproj.CoreCompileInputs.cache
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\adm\source\repos\paytech_api\Paytech\obj\Debug\net6.0\Paytech.MvcApplicationPartsAssemblyInfo.cache

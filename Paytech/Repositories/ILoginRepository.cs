@@ -7,7 +7,10 @@ namespace Paytech.Repositories
         bool Insert(Login login);
 
         Login GetByUsername(string username);
+
         List<Login> GetAll();
+
+        void Delete(string username);
 
     }
 }
